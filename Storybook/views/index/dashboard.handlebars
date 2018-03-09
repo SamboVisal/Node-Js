@@ -1,0 +1,93 @@
+<div class="container-fluid dash-page ">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col s12">
+        <span class="flow-text">
+          <h3>Welcome To The Dashboard Is Where Your Stories Store</h3>
+        </span>
+      </div>
+      <div class="col s8 offset-s2">
+        <span class="flow-text">
+          <p>Welcome to dashboard, if you don't have any stories yet just click on below button. otherwise, your stories will
+            be shown.</p>
+        </span>
+      </div>
+      {{#if user}}
+      <div class="col s12">
+        <p class="wel-user">Hello {{user.firstName}}, Let's Geeting Start</p>
+        <a class="waves-effect waves-light btn" href="/stories/add">Add Story</a>
+        <a class="waves-effect waves-light btn disabled" href="/blog/add">Add Blog  <small>(Coming Soon)</small> </a> 
+      </div>
+
+      {{else}} {{/if }}
+    </div>
+  </div> 
+</div>
+<div class="container" id="dash-main">
+  <h3>Your Stories</h3>
+  <div class="row">
+    <div class="col s6">
+      <form action="/dashboard" method="GET">
+        <div class="input-field">
+          <input type="text" name="search">
+          <label for="search">Search Your Story By Title...</label>
+          <input type="submit" value="Query" class="btn">
+        </div>
+      </form>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+  {{#if story_found}}
+
+  <p>Your stories found: {{story_found}}</p>
+
+  {{else}} {{/if}} 
+  {{#if delete_msg}}
+  <div class="card-panel red lighten-4 red-text text-darken-4" id="deleteMsg">{{delete_msg}}.</div>
+  {{else}} 
+  {{/if}} 
+  {{#if stories}}
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each stories}}
+      <tr>
+        <td>
+          <a href="/stories/show/{{id}}">{{title}}</a>
+        </td>
+        <td>{{formatDate date 'MMMM Do YYYY'}}</td>
+        <td>
+          <span class="dash-status">{{status}}</span>
+        </td>
+        <td>
+          <a class="btn left-align" href="/stories/edit/{{id}}">
+            <i class="fa fa-pencil"></i> Edit</a>
+
+          <form action="/stories/{{id}}?_method=DELETE" method="post" id="delete-form">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn red">
+              <i class="fa fa-remove"></i> Delete</button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}} {{#if noMatch}}
+  <strong>{{noMatch}}</strong>
+  <p>Your strories found: {{story_found}}</p>
+  {{else}}
+  <p>You have not created any story yet.</p>
+  {{/if}} {{/if}}
+
+</div>

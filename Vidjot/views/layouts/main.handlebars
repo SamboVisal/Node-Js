@@ -1,0 +1,17 @@
+{{> _head}}
+</head>
+
+<body>
+  {{> _navbar}}
+
+  <div class="container">
+    {{> _msg}}
+    {{> _errors}}
+    <!--using triple {} to show to content body in index.handlebars -->
+    {{{body}}}
+  </div>
+  
+  {{> _scripts}}
+</body>
+
+</html>

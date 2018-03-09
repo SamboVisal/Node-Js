@@ -1,0 +1,19 @@
+{
+  "name": "imagetomongo",
+  "version": "1.0.0",
+  "description": "Upload to mongoose",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.0.4",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "visal",
+  "license": "ISC"
+}

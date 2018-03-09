@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card center-align">
+        <div class="card-content">
+          <span class="card-title">{{userInfo.firstName}} {{userInfo.lastName}}</span>
+          <img src="{{userInfo.image}}" class="circle responsive-img">
+        </div>
+        <div class="card-action">
+          
+            {{#if foundBio}}
+            <p>
+          <p>Description:</p>
+            {{foundBio.description}}
+          </p>
+            {{else}}
+            <p>
+          <p>Description:</p>
+            <strong>Not Set </strong>
+          </p>
+            {{/if}}
+          
+
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m8">
+      <div class="card">
+        <div class="card-content">
+          <h4>Information</h4>
+          {{#if user}}
+            {{#if foundBio}}
+          <p>
+            <i class="fa fa-user"></i> Full Name: {{userInfo.firstName}} {{userInfo.lastName}}</p>
+          <p>
+            <i class="fa fa-book"></i> Story: {{userSto.length}}</p>
+          <p>
+            <i class="fa fa-university"></i> Education: {{foundBio.education}}</p>
+          <p>
+            <i class="fa fa-home"></i> From: {{foundBio.from}}</p>
+          <p>
+            <i class="fa fa-location-arrow"></i> Live: {{foundBio.live}}</p>
+  
+            {{else}}
+          <p>
+            <i class="fa fa-user"></i> Full Name: {{userInfo.firstName}} {{userInfo.lastName}}</p>
+          <p>
+            <i class="fa fa-book"></i> Story: {{userSto.length}}</p>
+          <p>
+            <i class="fa fa-university"></i> Education: <strong>Not Set </strong></p>
+          <p>
+            <i class="fa fa-home"></i> From: <strong>Not Set </strong></p>
+          <p>
+            <i class="fa fa-location-arrow"></i> Live: <strong>Not Set </strong></p>
+          
+            {{/if}}
+          {{#if priority}} {{#if foundBio}}
+          <p>
+            <a href="/users/edit/{{userInfo._id}}">Edit Your Information.</a>
+          </p>
+          {{else}}
+          <p>
+            <a href="/users/add/{{userInfo._id}}">Add Your Information.</a>
+          </p>
+          {{/if}} {{else}} {{/if}} {{else}}
+          <p>Please
+            <a href="/auth/google">Log In</a> to see user's information.</p>
+          {{/if}}
+
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m8">
+      <h4>Blog</h4>
+      <div class="card">
+        
+        <div class="card-content">
+          <h5>My LIST</h5>
+          <p>This is my life</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

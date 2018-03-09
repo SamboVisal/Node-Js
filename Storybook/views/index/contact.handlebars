@@ -1,0 +1,64 @@
+<div class="container-fluid contact-main">
+  <div class="overlay-contact">
+    <h3>Contact Us</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p>We are appreciate for your valuable feedback. <br> Leave us a comment below.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="card center-align">
+        <h4 class="wow fadeInDown">Kindly, Tell Us About Your Mind!</h4>
+        {{msg}}
+        <form action="/contact" method="post">
+          <div class="col s6">
+            <div class="input-field">
+              <input type="text" name="name" required>
+              <label for="name">Your Name</label>
+              {{#each error_name}}
+              <p class="red-text">*{{text}}</p>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="input-field">
+              <input type="email" name="email" required>
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="card-content">
+                <div class="input-field">
+                  <legend class="left-align">Comment:</legend>
+                  <textarea name="bodys" id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1"></label>
+                
+                </div>
+                <div>
+                  {{#each error}}
+                  <p class="red-text">*{{comment}}</p>
+                  {{else}} {{/each}}
+                </div>
+                  
+            </div>
+            </div>
+            
+          </div>
+
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="fa fa-send"></i>
+    </button>
+    </form>
+  </div>
+</div>

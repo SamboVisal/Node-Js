@@ -1,0 +1,52 @@
+<div class="container">
+  <h3>{{u_name}} {{title_head}}</h3>
+  <div class="row">
+    <div class="col s6">
+      <form action="/stories/my" method="GET">
+        <div class="input-field">
+          <input type="text" name="search">
+          <label for="search">Search Your Story By Title...</label>
+          <input type="submit" value="Query" class="btn">
+        </div>
+      </form>
+    </div>
+  </div>
+  {{#each stories}}
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          {{#if user}} {{{editIcon user.id ../user.id id}}} {{/if}}
+        </div>
+        <div class="card-content center-align">
+          <h5>{{title}}</h5>
+          <p class="story-text">{{stripTags (truncate body 150)}}</p>
+          <br>
+          <div class="chip">
+            <img src="{{user.image}}" alt="Contact Person">
+            <a href="/stories/user/{{user.id}}"> {{user.firstName}} {{user.lastName}}</a>
+
+          </div>
+          <div>
+            <small>Posted in: {{formatDate date 'MMMM Do YYYY'}}</small>
+          </div>
+        </div>
+        <div class="card-action center-align">
+          <div>
+            <a class="waves-effect waves-light btn" href="/stories/show/{{id}}">Read More</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {{else}}
+    {{#if noMatch}}
+    {{else}}
+    <p>{{user.firstName}} has no story to post here. <a href="/stories/add">click here</a> to add a story.</p>
+    {{/if}}
+    {{/each}}
+    {{#if noMatch}}
+   <strong>{{noMatch}}</strong>
+    {{/if}}
+  </div>
+</div>

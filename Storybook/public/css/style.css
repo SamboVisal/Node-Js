@@ -1,0 +1,266 @@
+.nav-wrapper .brand-logo{
+  color:cornflowerblue;
+}
+.home-page{
+  background-image: url('../img/home-page.jpeg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.home-page h3{
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: lato;
+  padding-top: 20px;
+  font-weight: 200;
+}
+
+.home-page p{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .home-page h3 {
+     font-size: 40px;
+  }
+  .home-page p{
+    font-size: 17px;
+
+  }
+}
+.home-google{
+  margin-bottom: 10px;
+}
+.home-page .wel-user{
+  color: aqua;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dark-overlay{
+  background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 500px;
+}
+/*
+Register page
+*/
+/* .register-page{
+  background: url('../img/register-page.jpeg') no-repeat fixed center;
+  height: 612px;
+  position: relative;
+  background-size: cover;
+  margin-top: -10px;
+} */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.nav-wrapper .fa-bars{
+  font-size: 25px;
+}
+.story-text{
+  height: 120px;
+}
+.dash-status{
+  text-transform: capitalize;
+}
+#delete-form{
+  display: inline;
+}
+/*
+dashboard page
+*/
+.dash-page{
+  background-image: url('../img/dashboard/dashboard.png');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.dash-page h3{
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: lato;
+  padding-top: 20px;
+  font-weight: 200;
+}
+
+.dash-page p{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .dash-page h3 {
+     font-size: 40px;
+  }
+  .dash-page p{
+    font-size: 17px;
+
+  }
+}
+.home-google{
+  margin-bottom: 10px;
+}
+.dash-page .wel-user{
+  color: aqua;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*
+Index page
+*/
+.index-main{
+  background-image: url('../img/index-home/main-index.jpeg');
+  height: 500px;
+  background-size: cover;
+}
+.index-main img{
+  margin-left: 20px;
+}
+.main-section1 img{
+  height: 500px;
+}
+.fa-promo{
+  font-size: 50px;
+}
+.index-contact{
+  background-image: url('../img/index-home/main-index.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 300px;
+  position: relative;
+}
+.overlay-index{
+  background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 300px;
+}
+.index-contact h4{
+  color: antiquewhite;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+}
+.index-contact p{
+  color: white;
+  text-align: center;
+}
+.index-contact a{
+  margin-top: 20px;
+  background: none;
+  border: 1px solid aqua;
+}
+/*
+Ended Of Index Page
+*/
+/*
+about page
+*/
+.about-main{
+  background-image: url('../img/about-index/about-main.jpeg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.overlay-about{
+  background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 500px;
+}
+.about-main h3{
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: lato;
+  padding-top: 20px;
+  font-weight: 200;
+}
+.about-main p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.btn-about{
+  margin-top: 50px;
+}
+.team-work img{
+  border-radius: 40%;
+}
+.team-work h5{
+  padding-top: 20px;
+}
+
+.team-main{
+  background-image: url('../img/contact/contact.jpeg');
+  height: 600px;
+  width: 100%;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+}
+.team-work{
+  max-width: 80%;  
+}
+.team-card{
+  margin-top: 60px;
+  max-width: 80%;
+  position: absolute;
+}
+
+
+/*contact page*/
+.contact-main{
+  background-image: url('../img/contact/contact.jpeg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.overlay-contact{
+  background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 500px;
+}
+.contact-main h3{
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: lato;
+  padding-top: 20px;
+  font-weight: 200;
+}
+.contact-main p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}

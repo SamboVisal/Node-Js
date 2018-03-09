@@ -1,0 +1,54 @@
+<div class="container">
+  <h4>Choose a thumnail</h4>
+  {{#if msg}}
+  <p>{{msg}}</p>
+  {{/if}}
+  <form action="/blog/upload" method="POST" enctype="multipart/form-data">
+      <div class="file-field input-field">
+        <div class="btn grey">
+          <span>File</span>
+          <input type="file" name="myImage">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+<div class="container">
+  <div class="row">
+    <h3 class="center-align">Add a new blog</h3>
+    <form class="col s12" action="/upload" method="post">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Title" id="title" type="text" class="validate" name="title">
+          <label for="title">Title</label>
+        </div>
+      </div>
+
+      <div class="row">
+      
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <select name="Type" id="">
+          <option value="public" selected>Select One</option>
+          <option value="technology">Techonology</option>
+          <option value="information technology">Information Technology</option>
+          <option value="Business">Business</option>
+
+        </select>
+        <label for="Type">Type</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <h5>Description</h5>
+        <textarea name="body" placeholder="Your Description..."></textarea>
+      </div>
+    </div>
+    <input type="submit" value="Create Blog" class="btn ">
+    </form>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="container-fluid home-page ">
+  <div class="dark-overlay">
+    <div class="row">
+      <div class="col s12">
+        <span class="flow-text">
+          <h3>Welcome To The Place To Share Your Own Book Story</h3>
+        </span>
+      </div>
+      <div class="col s8 offset-s2">
+        <span class="flow-text">
+          <p>Welcome to storybook, Post story from the best and worst in realife and choose for them to be read for world or
+            completely private as your own personal daily</p>
+        </span>
+      </div>
+      {{#if user}}
+      <div class="col s12">
+        <p class="wel-user">{{user.firstName}}, Below is your dashboard</p>
+        <a class="waves-effect waves-light btn" href="/dashboard">Dashboard</a>
+
+      </div>
+
+      {{else}}
+      <div class="col s12">
+        <a href="/auth/google" class="btn red darken-1 home-google">
+          <i class="fa fa-google left"></i> Login With Google</a>
+      </div>
+
+      {{/if }}
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="card-panel hoverable center-align">
+    <h3>You can Share, Read and Engage with amazing Book Story</h3>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <div class="col s12 center-align">
+
+        <p>StoryBook is a place for people sharing their story like best or worst in their life by posting in our platform.
+          <br> Let's enhance your story and other's story with us.
+          <br> You can share your story with the world by posting as public or private for your own business.
+        </p>
+        <div class="col s12 center-align" style="margin-top:10px">
+          {{#if user}}
+          {{else}}
+          <div class="col s12">
+            <a href="/auth/google" class="btn red darken-1 home-google">
+              <i class="fa fa-google left"></i> Login With Google</a>
+          </div>
+
+          {{/if }}
+        </div>
+      </div>
+    </div>
+    <div class="container main-section1 center-align">
+      <div class="col s12">
+        <img src="./img/index-home/begin-state.jpeg" alt="" class="responsive-img">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row center-align">
+
+    <div class="col s4">
+      <a href="#" class="fa fa-archive fa-promo"></a>
+      <h3>Archievment</h3>
+      <p>Our platform tends to assist all users to share their journal daily or planning to make a book to establish by themselve
+        in order to promote their book.</p>
+    </div>
+    <div class="col s4">
+      <a href="#" class="fa fa-book fa-promo"></a>
+      <h3>Safety</h3>
+      <p>Our platform provides some options for them to upload their journal like
+        <strong>private</strong> or
+        <strong>public</strong> in order to ensure their copyright.</p>
+    </div>
+    <div class="col s4">
+      <a href="#" class="fa fa-user fa-promo"></a>
+      <h3>Keep In Touch</h3>
+      <p>In order to improve our platform as a service provider we will accept all of your complain for future improvement.</p>
+    </div>
+
+  </div>
+
+</div>
+<div class="container-fluid index-contact center-align">
+  <div class="overlay-index">
+    <h4>Contact Us</h4>
+    <p>Feel Free To Consult With Us.</p>
+    <a href="/contact" class="btn">Contact Us</a>
+  </div>
+</div>

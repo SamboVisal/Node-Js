@@ -1,0 +1,7 @@
+{{#if error_msg}}
+<div class="card-panel red lighten-4 red-text text-darken-4">{{error_msg}}</div>
+{{/if}} {{#each errors}}
+<div class="col s12">
+  <div class="card-panel red lighten-4 red-text text-darken-4">{{text}}</div>
+</div>
+{{else}} {{/each}}
